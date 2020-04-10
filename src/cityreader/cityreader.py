@@ -36,6 +36,16 @@ class City:
 # should not be loaded into a City object.
 
 
+def get_abspath_to(path):
+
+    # - We can't gaurantee where the user is running this script.
+    # - We can't outright know the relative path to our data file.
+    this_file_path = inspect.getframeinfo(inspect.currentframe()).filename
+    this_dir_path = os.path.dirname(os.path.abspath(this_file_path))
+
+    return os.path.join(this_dir_path, path)
+
+
 def cityreader(cities=None):
 
     if cities is None:
