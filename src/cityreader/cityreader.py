@@ -76,9 +76,15 @@ def cityreader(cities=None):
 
         # define getters
         data_keys = next(reader)
-        def get_city_name(city): return get_data_value(data_keys, 'city', city)
-        def get_city_lat(city): return get_data_value(data_keys, 'lat', city)
-        def get_city_lon(city): return get_data_value(data_keys, 'lng', city)
+
+        def get_city_name(city):
+            return str(get_data_value(data_keys, 'city', city))
+
+        def get_city_lat(city):
+            return float(get_data_value(data_keys, 'lat', city))
+
+        def get_city_lon(city):
+            return float(get_data_value(data_keys, 'lng', city))
 
         # get city data
         for data_values in reader:
