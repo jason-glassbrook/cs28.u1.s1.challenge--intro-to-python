@@ -135,14 +135,20 @@ for city in cities:
 
 # TODO Get latitude and longitude values from the user
 
-
-lat1 = 0
-lon1 = 0
-lat2 = 0
-lon2 = 0
+def input_tuple(*keys):
+    values = input(f"Enter {', '.join(keys)}: ").split(",")
+    return tuple(v.strip() for v in values)
 
 
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=None):
+
+    # TODO Ensure that the lat and lon valuse are all floats
+    # Go through each city and check to see if it falls within
+    # the specified coordinates.
+
+    # process input
+    lat1, lat2 = tuple(sorted((float(lat1), float(lat2))))
+    lon1, lon2 = tuple(sorted((float(lon1), float(lon2))))
 
     if cities is None:
         cities = []
@@ -150,12 +156,12 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=None):
     # cities_within will hold the cities that fall within the specified region
     cities_within = []
 
-    # TODO Ensure that the lat and lon valuse are all floats
-    # Go through each city and check to see if it falls within
-    # the specified coordinates.
-
     return cities_within
 
+
+# prompt user input
+lat1, lon1 = input_tuple('lat1', 'lon1')
+lat2, lon2 = input_tuple('lat2', 'lon2')
 
 cities_within = cityreader_stretch(lat1, lon1, lat2, lon2, cities)
 
