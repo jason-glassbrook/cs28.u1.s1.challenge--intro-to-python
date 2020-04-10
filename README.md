@@ -22,7 +22,7 @@ Complete the programs in the `src/` directory in any order.
 
 *   [ ] `oop/`
     *   [x] `oop1.py`: class hierarchies
-    *   [ ] `oop2.py`: sub-classing and method overriding
+    *   [x] `oop2.py`: sub-classing and method overriding
 *   [ ] `comp/`
     *   [ ] `comp.py`: list comprehensions
 *   [ ] `cityreader/`
