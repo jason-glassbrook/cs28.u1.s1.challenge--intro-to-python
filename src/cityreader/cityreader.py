@@ -135,9 +135,9 @@ for city in cities:
 
 # TODO Get latitude and longitude values from the user
 
-def input_tuple(*keys):
+def input_tuple(keys, types):
     values = input(f"Enter {', '.join(keys)}: ").split(",")
-    return tuple(v.strip() for v in values)
+    return tuple(types[i](v.strip()) for i, v in enumerate(values))
 
 
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=None):
@@ -164,8 +164,14 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=None):
 
 
 # prompt user input
-lat1, lon1 = input_tuple('lat1', 'lon1')
-lat2, lon2 = input_tuple('lat2', 'lon2')
+lat1, lon1, lat2, lon2 = tuple([0] * 4)
+while True:
+    try:
+        lat1, lon1 = input_tuple(('lat1', 'lon1'), (float, float))
+        lat2, lon2 = input_tuple(('lat2', 'lon2'), (float, float))
+        break
+    except:
+        print("--- bad input, try again ---")
 
 cities_within = cityreader_stretch(lat1, lon1, lat2, lon2, cities)
 
