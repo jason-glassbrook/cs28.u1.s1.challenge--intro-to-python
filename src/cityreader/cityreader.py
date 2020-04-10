@@ -46,6 +46,20 @@ def get_abspath_to(path):
     return os.path.join(this_dir_path, path)
 
 
+def get_data_value(data_keys, data_key, data_values):
+
+    data_value = None
+
+    try:
+        data_index = data_keys.index(data_key)
+        data_value = data_values[data_index]
+
+    except:
+        print("get_data_value() -- something went wrong")
+
+    return data_value
+
+
 def cityreader(cities=None):
 
     if cities is None:
