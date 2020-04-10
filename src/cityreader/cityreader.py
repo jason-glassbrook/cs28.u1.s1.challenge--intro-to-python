@@ -3,6 +3,8 @@
 ############################################################
 
 
+import inspect
+import os
 import csv
 
 
@@ -68,6 +70,22 @@ def cityreader(cities=None):
     # TODO Implement the functionality to read from the 'cities.csv' file
     # For each city record, create a new City instance and add it to the
     # `cities` list
+    with open(get_abspath_to('cities.csv')) as file:
+
+        reader = csv.reader(file)
+
+        # define getters
+        data_keys = next(reader)
+        def get_city_name(city): return get_data_value(data_keys, 'city', city)
+        def get_city_lat(city): return get_data_value(data_keys, 'lat', city)
+        def get_city_lon(city): return get_data_value(data_keys, 'lng', city)
+
+        # get city data
+        for data_values in reader:
+            name = get_city_name(data_values)
+            lat = get_city_lat(data_values)
+            lon = get_city_lon(data_values)
+            cities.append(City(name, lat, lon))
 
     return cities
 
