@@ -23,7 +23,10 @@ import csv
 cities = []
 
 
-def cityreader(cities=[]):
+def cityreader(cities=None):
+
+    if cities is None:
+        cities = []
 
     # TODO Implement the functionality to read from the 'cities.csv' file
     # For each city record, create a new City instance and add it to the
@@ -70,7 +73,10 @@ for c in cities:
 # TODO Get latitude and longitude values from the user
 
 
-def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
+def cityreader_stretch(lat1, lon1, lat2, lon2, cities=None):
+
+    if cities is None:
+        cities = []
 
     # within will hold the cities that fall within the specified region
     within = []
