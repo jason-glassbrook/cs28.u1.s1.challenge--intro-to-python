@@ -20,7 +20,7 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Complete the programs in the `src/` directory in any order.
 
-*   [ ] `oop/`
+*   [x] `oop/`
     *   [x] `oop1.py`: class hierarchies
     *   [x] `oop2.py`: sub-classing and method overriding
 *   [ ] `comp/`
