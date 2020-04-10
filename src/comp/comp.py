@@ -31,19 +31,19 @@ humans = [
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with 'D':
 print("Starts with D:")
-a = [human.name for human in humans if re.match(r"^[Dd]", human.name)]
+a = [human.name for human in humans if re.match(r"^[Dd].*", human.name)]
 print(a)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name ends in "e".
 print("Ends with e:")
-b = [human.name for human in humans if re.match(r"[Ee]$", human.name)]
+b = [human.name for human in humans if re.match(r".*[Ee]$", human.name)]
 print(b)
 
 # Write a list comprehension that creates a list of names of everyone
 # whose name starts with any letter between 'C' and 'G' inclusive.
 print("Starts between C and G, inclusive:")
-c = [human.name for human in humans if re.match(r"^[C-Gc-g]", human.name)]
+c = [human.name for human in humans if re.match(r"^[C-Gc-g].*", human.name)]
 print(c)
 
 # Write a list comprehension that creates a list of all the ages plus 10.
