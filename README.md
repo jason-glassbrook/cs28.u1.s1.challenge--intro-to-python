@@ -1,8 +1,9 @@
-#  Sprint Challenge: Intro to Python
+# Sprint Challenge: Intro to Python
 
 In this week's Sprint you explored the Python programming language as well as object-oriented design principles. This Sprint Challenge aims to assess your comfort in both of these areas through exercises similar to the ones you worked on at the beginning of this week in Intro to Python.
 
 ## Instructions
+
 **Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
 
 This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in the preceding days.
@@ -19,13 +20,13 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 
 Complete the programs in the `src/` directory in any order.
 
-* `oop/`
-    * `oop1.py`: class hierarchies
-    * `oop2.py`: subclassing and method overriding
-* `comp/`
-    * `comp.py`: list comprehensions
-* `cityreader/`
-    * `cityreader.py`: modules and CSV file reading
+*   [x] `oop/`
+    *   [x] `oop1.py`: class hierarchies
+    *   [x] `oop2.py`: sub-classing and method overriding
+*   [x] `comp/`
+    *   [x] `comp.py`: list comprehensions
+*   [x] `cityreader/`
+    *   [x] `cityreader.py`: modules and CSV file reading
 
 ## Testing
 
@@ -43,11 +44,12 @@ In your solution, it is essential that you follow best practices and produce cle
 
 ## Stretch Problems
 
-The `cityreader` directory poses an stretch problem that builds upon the functionality you are to implement as part of the non-stretch requirements in the `cityreader` directory. 
+*   [ ] The `cityreader` directory poses an stretch problem that builds upon the functionality you are to implement as part of the non-stretch requirements in the `cityreader` directory.
 
-There's a separate test file `test_stretch.py` for the stretch problem that you can run in order to test your implementation of the stretch problem.
+    There's a separate test file `test_stretch.py` for the stretch problem that you can run in order to test your implementation of the stretch problem.
 
 ## Rubric
+
 | OBJECTIVE | TASK | 1 - DOES NOT MEET Expectations | 2 - MEETS Expectations | 3 - EXCEEDS Expectations | SCORE |
 | ---------- | ----- | ------- | ------- | ------- | -- |
 | _Student can demonstrate applied knowledge of Python basics by producing list comprehensions in `comp.py`_ | List Comprehensions: (1 point per problem, 8 max) | 0-5 points | 6-7 points | 8 points |  |
